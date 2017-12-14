@@ -11,7 +11,11 @@ const friendsReducer = (friends = [], action) => {
             return action.payload.data;
 
         case DELETE_FRIENDS:
-            console.log(action.payload.data)
+            // console.log(action.payload.data)
+            return action.payload.data;
+
+        case UPDATE_FRIEND:
+            // console.log(action.payload.data)
             return action.payload.data;
 
         default:
