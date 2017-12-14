@@ -1,0 +1,55 @@
+
+.App {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: Roboto, Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    margin: 0px;
+    color:#443e3e;
+    font-size: 20px;
+  }
+.Cardcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #f7f7f7cc;
+    margin: 20px;
+}
+.Cardcontainer__header{
+    width: 100%;
+    height: 10%;
+    padding-left:10px;
+    padding-top:10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f7f7f7cc;
+}
+.Cardcontainer__body{
+    width: 100%;
+    padding:10px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.Cardcontainer__bodyitem{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.Cardcontainer__body--filmview{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left:10px;
+
+}

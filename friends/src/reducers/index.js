@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { GET_FRIENDS,ADD_FRIENDS,DELETE_FRIENDS } from '../actions';
+import { GET_FRIENDS,ADD_FRIENDS,DELETE_FRIENDS,UPDATE_FRIEND} from '../actions';
 
 
 const friendsReducer = (friends = [], action) => {

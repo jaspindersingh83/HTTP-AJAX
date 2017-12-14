@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import { addFriends } from '../actions';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
+import './FriendList.css'
 
 
 class Form extends Component {
@@ -39,7 +40,7 @@ class Form extends Component {
     }
     render () {
         return (
-            <div>
+            <div className='Cardcontainer'>
                     <input type='text' placeholder="Enter Name" onChange={this.handleNameInput} value={this.state.newFriend.name}/>
                     <input type='value' placeholder="Enter Age" onChange={this.handleAgeInput} value={this.state.newFriend.age}/>
                     <input type='text' placeholder="Enter email" onChange={this.handleEmailInput} value={this.state.newFriend.email}/>
@@ -50,10 +51,9 @@ class Form extends Component {
 
 }
 
-const mapStateToProps = (state) => {
-    return {
-    };
-};
+// const mapStateToProps = (state) => {
+//     return {
+//     };
+// };
 
-
-export default connect(mapStateToProps, { addFriends })(Form);
+export default connect(null, { addFriends })(Form);
