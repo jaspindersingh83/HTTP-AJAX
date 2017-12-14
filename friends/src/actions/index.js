@@ -1,6 +1,7 @@
 import axios from 'axios';
 export const GET_FRIENDS = 'GET_FRIENDS';
 export const ADD_FRIENDS = 'ADD_FRIENDS';
+export const DELETE_FRIENDS = 'DELETE_FRIENDS';
 
 export const getFriends = () => {
     // Add the code for this action
@@ -20,5 +21,16 @@ export const addFriends = (obj) => {
     return {
         type: ADD_FRIENDS,
         payload: addfriendRequest
+    }
+};
+export const deleteFriend = () => {
+   
+    // Add the code for this action
+    const apiUrl = 'http://localhost:5000/delete-friend';
+    const deleteFriend = axios.delete(apiUrl);
+    console.log(deleteFriend)
+    return {
+        type: DELETE_FRIENDS,
+        payload: deleteFriend
     }
 };

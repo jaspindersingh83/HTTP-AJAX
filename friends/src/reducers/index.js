@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
-import { GET_FRIENDS,ADD_FRIENDS } from '../actions';
+import { GET_FRIENDS,ADD_FRIENDS,DELETE_FRIENDS } from '../actions';
+
 
 const friendsReducer = (friends = [], action) => {
     switch(action.type) {
@@ -7,6 +8,10 @@ const friendsReducer = (friends = [], action) => {
             return action.payload.data;
 
         case ADD_FRIENDS:
+            return action.payload.data;
+
+        case DELETE_FRIENDS:
+            console.log(action.payload.data)
             return action.payload.data;
 
         default:
