@@ -1,11 +1,10 @@
 import axios from 'axios';
-
 export const GET_FRIENDS = 'GET_FRIENDS';
 export const ADD_FRIENDS = 'ADD_FRIENDS';
 
 export const getFriends = () => {
     // Add the code for this action
-    let payload = {};
+    // let payload = {};
     const apiUrl = 'http://localhost:5000/friends';
     const friendRequest = axios.get(apiUrl)
     return {
@@ -14,13 +13,12 @@ export const getFriends = () => {
     }
 };
 
-export const addFriends = () => {
+export const addFriends = (obj) => {
     // Add the code for this action
-    let payload = {};
-    const apiUrl = 'http://localhost:5000/friends';
-    const addfriendRequest = axios.get(apiUrl,content)
+    const apiUrl = 'http://localhost:5000/new-friend';
+    const addfriendRequest = axios.post(apiUrl,obj);
     return {
-        type: GET_FRIENDS,
+        type: ADD_FRIENDS,
         payload: addfriendRequest
     }
 };

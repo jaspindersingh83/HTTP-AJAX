@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
-import axios from 'axios';
+import Form from './Form'
 
 class FriendList extends Component {
     componentDidMount() {
@@ -23,6 +23,7 @@ class FriendList extends Component {
                         );
                     })}
                 </ul>
+                <Form />
             </div>
         );
     }
