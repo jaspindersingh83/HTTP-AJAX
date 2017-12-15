@@ -8,16 +8,19 @@ class FriendList extends Component {
     componentDidMount() {
         this.props.getFriends();
     }
+   
 
     render() {
         return (
             <div className='App'>
                     {this.props.friends.map((friend, i) => {
                         return (
-                            <div className='Cardcontainer' key={i}>
+                            // {/* get it in a separate component  */}
+                            <div className='Cardcontainer' key={friend.name}>
                                 <div className='Cardcontainer__header'>{`Friend ${i+1}`}</div>
                                 <div className='Cardcontainer__body'>
-                                    <button onClick={this.props.deleteFriend}> Delete Friend </button>
+                                {/* get it in a separate component  */}
+                                    <button onClick={() => {this.props.deleteFriend(i)}}> Delete Friend </button> 
                                     <p>{`Name: ${friend.name}`}</p>
                                     <p>{`Age: ${friend.age}`}</p>
                                     <p>{`Email: ${friend.email}`}</p>

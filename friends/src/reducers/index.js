@@ -3,6 +3,7 @@ import { GET_FRIENDS,ADD_FRIENDS,DELETE_FRIENDS,UPDATE_FRIEND} from '../actions'
 
 
 const friendsReducer = (friends = [], action) => {
+    console.log('action', action);
     switch(action.type) {
         case GET_FRIENDS:
             return action.payload.data;

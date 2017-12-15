@@ -51,10 +51,21 @@ app.put('/update-friend', (req, res) => {
 	res.send(friends);
 });
 
-app.delete('/delete-friend', (req, res) => {
-	const index = req.body.index;
-	friends.splice(index, 1);
-	res.send(friends);
+app.delete('/delete-friend/:index', (req, res) => {
+	
+	const index = req.params.index;
+	console.log(index);
+	if (index) {
+		// db.connect 
+		
+		friends.splice(index, 1);
+	}
+	res.status(200).json(friends)
+	// console.log()
+	// } else {
+	// 	res.status(422).json({ error: 'please provide the index'})
+	// }
+	// res.send(friends);
 });
 
 app.listen(5000, () => {
