@@ -28,7 +28,7 @@ export const addFriends = (obj) => {
 export const deleteFriend = (index) => {
     // Add the code for this action
     console.log(index);
-    const apiUrl = `http://localhost:5000/delete-friend/${index}`;
+    const apiUrl = `http://localhost:5000/delete-friend/${in}`;
     const deleteFriend = axios.delete(apiUrl);
     // console.log(deleteFriend)
     return {
